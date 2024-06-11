@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.image-grid-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.image-grid-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-grid-column > a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#preview-image {
+  max-width: 600px;
+  width: 100%;
+}
+.preview-image-contanier {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-cover {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  left: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3746170343137255) 0%,
+    rgba(255, 255, 255, 0) 16%,
+    rgba(0, 0, 0, 0.5062696953781513) 100%
+  );
+}
+.image-grid-column > a:hover .image-cover {
+  opacity: 1;
+}
+a {
+  color: aliceblue;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  transition: 0.3s;
+  border-radius: 7px;
+}
+a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.image-account {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 40px;
+}
+.photographer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: url(../image/IMAGE\ 2024-06-11\ 08:40:37.jpg);
+  background-size: cover;
+}
+.photographer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-button-group {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.btm {
+    border-radius: 8px;
+  background-color: rgb(0, 255, 17);
+  margin-left: 450px;
+  margin-top: 50px;
+  align-items: center;
+  width: 200px;
+  height: 70px;
+  font-size: 36px;
+  color: white;
+
+}
+
+.btm :hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
